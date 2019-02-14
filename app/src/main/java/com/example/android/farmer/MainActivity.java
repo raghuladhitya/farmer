@@ -91,10 +91,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editTextPhone.setError("Invalid phone number.");
             return false;
         }
-        if(phoneNumber.length()<10){
-            editTextPhone.setError("Please enter a valid phone number");
-            return false;
-        }
         return true;
 
     }
@@ -136,10 +132,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
                 if(flag==0){
-                    profile p = new profile("none","none","none","none",phoneNumber,"none","none");
+                    profile p = new profile("none","none","none",phoneNumber,"none","none");
                     Products p1 = new Products("none","none","none","none");
                     reference.child(phoneNumber).child("profile").setValue(p);
-                    reference.child(phoneNumber).child("products").child("1").setValue(p1);
+                    reference.child(phoneNumber).child("products").setValue(p1);
                 }
                 Intent intent = new Intent(MainActivity.this,UserActivity.class);
                 intent.putExtra("phoneNumber",phoneNumber);

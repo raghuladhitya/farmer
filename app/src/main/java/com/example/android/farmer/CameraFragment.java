@@ -79,7 +79,6 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
 
                 if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode==getActivity().RESULT_OK){
                     uri = data.getData();
-
                 }
                 else if(requestCode == 1 && resultCode==getActivity().RESULT_OK) {
                     uri = data.getData();

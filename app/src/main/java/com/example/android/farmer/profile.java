@@ -2,13 +2,12 @@ package com.example.android.farmer;
 
 public class profile {
 
-    private String Age,Gender,district,email,mobileNumber,name,state;
+    private String Age,Gender,email,mobileNumber,name,state;
     public profile(){}
 
-    public profile(String Age, String Gender, String district, String email, String mobileNumber, String name, String state) {
+    public profile(String Age, String Gender, String email, String mobileNumber, String name, String state) {
         this.Age = Age;
         this.Gender = Gender;
-        this.district = district;
         this.email = email;
         this.mobileNumber = mobileNumber;
         this.name = name;
@@ -29,14 +28,6 @@ public class profile {
 
     public void setGender(String gender) {
         Gender = gender;
-    }
-
-    public String getDistrict() {
-        return district;
-    }
-
-    public void setDistrict(String district) {
-        this.district = district;
     }
 
     public String getEmail() {
